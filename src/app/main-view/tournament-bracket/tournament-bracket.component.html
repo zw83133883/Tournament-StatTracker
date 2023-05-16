@@ -1,0 +1,8 @@
+<div class="tournament-bracket">
+    <div *ngFor="let round of rounds" class="round">
+      <div class="matchup" *ngFor="let matchup of round">
+        <input type="text" [(ngModel)]="matchup.team1" placeholder="Team 1">
+        <input type="text" [(ngModel)]="matchup.team2" placeholder="Team 2">
+      </div>
+    </div>
+</div>
