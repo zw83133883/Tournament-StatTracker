@@ -1,8 +1,22 @@
 <div class="tournament-bracket">
-    <div *ngFor="let round of rounds" class="round">
-      <div class="matchup" *ngFor="let matchup of round">
-        <input type="text" [(ngModel)]="matchup.team1" placeholder="Team 1">
-        <input type="text" [(ngModel)]="matchup.team2" placeholder="Team 2">
+  <h2>Number of Teams: {{ numOfTeams }}</h2>
+  <input type="number" [(ngModel)]="numOfTeams" placeholder="Enter number of teams">
+  <button (click)="generateBracket()">Generate Bracket</button>
+  <div *ngIf="isBracketGenerated">
+    <div class="bracket-tree">
+      <div class="round" *ngFor="let round of rounds">
+        <div class="matchup" *ngFor="let matchup of round">
+          <div class="team">
+            <input type="text" [(ngModel)]="matchup.team1" [disabled]="matchup.winner !== null">
+            <span *ngIf="matchup.team1">{{ matchup.team1 }}</span>
+          </div>
+          <div class="connector"></div>
+          <div class="team">
+            <input type="text" [(ngModel)]="matchup.team2" [disabled]="matchup.winner !== null">
+            <span *ngIf="matchup.team2">{{ matchup.team2 }}</span>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </div>

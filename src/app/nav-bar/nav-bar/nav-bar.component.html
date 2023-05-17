@@ -1,0 +1,21 @@
+<mat-sidenav-container class="nav-bar-container">
+  <mat-sidenav mode="side" class="side-nav-container" opened>
+    <ul class="nav-list-container">
+      <li>
+        <a mat-button routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      </li>
+      <li>
+        <a mat-button routerLink="/tournament" routerLinkActive="active" class="nav-link">Tournament</a>
+      </li>
+      <li>
+        <a mat-button routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+      </li>
+      <li>
+        <a mat-button routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
+      </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

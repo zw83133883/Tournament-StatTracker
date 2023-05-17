@@ -4,24 +4,28 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuBarComponent } from './menu-bar/menu-bar/menu-bar.component';
-import { AboutComponent } from './menu-bar/about/about.component';
-import { ContactComponent } from './menu-bar/contact/contact.component';
-import { HomeComponent } from './menu-bar/home/home.component';
+import { NavBarComponent } from './nav-bar/nav-bar/nav-bar.component';
+import { AboutComponent } from './nav-bar/about/about.component';
+import { ContactComponent } from './nav-bar/contact/contact.component';
+import { HomeComponent } from './nav-bar/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { TournamentBracketComponent } from './main-view/tournament-bracket/tournament-bracket.component';
 import { FormsModule } from '@angular/forms';
+import { MatListModule } from '@angular/material/list';
+import { TournamentComponent } from './nav-bar/tournament/tournament.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     ContactComponent,
-    MenuBarComponent,
+    NavBarComponent,
     HomeComponent,
     TournamentBracketComponent,
+    TournamentComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { FormsModule } from '@angular/forms';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

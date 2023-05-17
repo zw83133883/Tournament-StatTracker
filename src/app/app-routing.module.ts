@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './menu-bar/home/home.component';
-import { AboutComponent } from './menu-bar/about/about.component';
-import { ContactComponent } from './menu-bar/contact/contact.component';
+import { HomeComponent } from './nav-bar/home/home.component';
+import { AboutComponent } from './nav-bar/about/about.component';
+import { ContactComponent } from './nav-bar/contact/contact.component';
+import { TournamentComponent } from './nav-bar/tournament/tournament.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'tournament', component: TournamentComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
 ];

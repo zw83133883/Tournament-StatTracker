@@ -1,0 +1,23 @@
+.nav-bar-container {
+  height: 100vh;
+}
+
+.side-nav-container {
+  background-color: rgb(33, 24, 53);
+}
+
+.nav-list-container {
+  list-style-type: none;
+}
+
+.nav-list-container a {
+  color: white !important;
+  text-decoration: none;
+  padding: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-list-container a:hover,
+.nav-list-container a:focus {
+  color: rgb(18, 151, 255) !important;
+}
