@@ -16,6 +16,7 @@ import { TournamentBracketComponent } from './main-view/tournament-bracket/tourn
 import { FormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { TournamentComponent } from './nav-bar/tournament/tournament.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { TournamentComponent } from './nav-bar/tournament/tournament.component';
     MatButtonModule,
     FormsModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
